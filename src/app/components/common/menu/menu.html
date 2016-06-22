@@ -1,0 +1,6 @@
+<span class="mdl-layout-title">{{'menu.title' | translate}}</span>
+<nav class="mdl-navigation">
+    <a [routerLink]="['./Home']" class="mdl-navigation__link" href="">{{'menu.home' | translate}}</a>
+    <a *ngIf="isAdmin()" [routerLink]="['Admin']" class="mdl-navigation__link" href="">{{'menu.admin' | translate}}</a>
+    <a [routerLink]="['Contact']" class="mdl-navigation__link" href="">{{'menu.contact' | translate}}</a>
+</nav>

@@ -1,0 +1,18 @@
+<div aria-expanded="true" role="button" tabindex="0" class="mdl-layout__drawer-button">
+    <i class="material-icons"></i>
+</div>
+<div class="mdl-layout__header-row">
+    <span class="mdl-layout-title">{{'header.title' | translate}}</span>
+    <div class="mdl-layout-spacer"></div>
+    <!-- Right layer -->
+    <span class="mdl-layout-title">{{'header.hello' | translate}} {{username}}</span>
+    <!-- Options Menu -->
+    <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">more_vert</i>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+        for="demo-menu-lower-right">
+    <li class="mdl-menu__item" (click)="changeLang()">{{'header.language' | translate}}</li>
+    <li class="mdl-menu__item" (click)="doLogout()">{{'header.logout' | translate}}</li>
+    </ul>
+</div>

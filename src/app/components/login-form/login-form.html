@@ -1,0 +1,41 @@
+<div class="lang">
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--5-col"></div>
+        <div class="mdl-cell mdl-cell--1-col english">🇬🇧</div>
+        <div class="mdl-cell mdl-cell--1-col">
+            <label id="langSelector" class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-2">
+                <input (change)="changeLang()" type="checkbox" id="switch-2" class="mdl-switch__input">
+                <span class="mdl-switch__label spanish">🇪🇸</span>
+            </label>
+        </div>
+    </div>
+</div>
+
+<hgroup>
+    <h1>{{'login.title' | translate}}</h1>
+    <h3>{{'login.subtitle' | translate}}</h3>
+</hgroup>
+<form>
+    <div class="group">
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" [(ngModel)]="username" type="text" id="sample1">
+            <label class="mdl-textfield__label" for="sample1">{{'login.username' | translate}}</label>
+        </div>
+    </div>
+    <div class="group">
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" [(ngModel)]="password" type="password" id="sample1">
+            <label class="mdl-textfield__label" for="sample1">{{'login.password' | translate}}</label>
+        </div>
+    </div>
+    <br>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+        <span class="mdl-checkbox__label">{{'login.rememberme' | translate}}</span>
+        <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" [(ngModel)]="rememberme">
+    </label>
+    <br><br> 
+    <button class="button buttonBlue" (click)="doLogin()">
+        {{'login.button' | translate}}
+    </button>
+</form>
+<div dialog-component [msg]="errorMsg.msg" [title]="errorMsg.title" [button]="errorMsg.button"></div>

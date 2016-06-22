@@ -1,0 +1,38 @@
+{
+    "header": {
+        "title" : "VASS Angular2 Pet",
+        "hello" : "Hello ",
+        "language": "Espańol",
+        "logout" : "Logout"
+    },
+    "menu" : {
+        "title" : "Menu",
+        "home" : "Home",
+        "admin" : "Admin",
+        "contact" : "Contact"
+    },
+    "login": {
+        "title": "VASS Angular2 Pet",
+        "subtitle" : "Please do login, default credentials are admin:admin",
+        "username": "Username",
+        "password": "Password",
+        "rememberme": "Remember Me",
+        "button": "Login",
+        "dialog" : {
+            "title" : "Error",
+            "msg" : "Error while logging. Please try again",
+            "button" : "Accept"
+        }
+    },
+    "greeting": {
+        "title": "Update text to change the greeting."
+    },
+    "livegraph": {
+        "title" : "Integration Example",
+        "msg": "Here is an example on how to integrate Angular2 with a third party library (Highcharts) and REST Services provided by the JHipster app"
+    },
+    "contact" : {
+        "title" : "Contact",
+        "content" : "This is the contact section"
+    }
+}

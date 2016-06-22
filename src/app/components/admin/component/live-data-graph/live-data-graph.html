@@ -1,0 +1,12 @@
+<div class="horizontal layout">
+    <div class="flex-2">
+         <chart [options]="options" (load)="saveInstance($event.context)">
+        </chart>
+    </div>
+    <div class="flex-2">
+        <span id="legend">
+            <h1>{{'livegraph.title' | translate}}</h1>
+            <p>{{'livegraph.msg' | translate}}</p>
+        </span>
+    </div>
+</div>

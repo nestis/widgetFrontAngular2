@@ -1,0 +1,4 @@
+.mdl-layout--fixed-drawer.is-upgraded:not(.is-small-screen)>.mdl-layout__header{
+    margin-left:280px;
+    width: calc(100% - 280px)
+}
