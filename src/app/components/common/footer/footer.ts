@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
-import {RouterLink} from "@angular/router-deprecated";
+import {ROUTER_DIRECTIVES} from "@angular/router";
 
 @Component({
     selector: 'footer',
     templateUrl: './app/components/common/footer/footer.html',
-    directives: [RouterLink]
+    directives: [ROUTER_DIRECTIVES]
 })
 
 export class Footer {}

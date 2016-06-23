@@ -1,6 +1,6 @@
 // Auth Service Definition
 import {Injectable} from '@angular/core';
-import {Router} from "@angular/router-deprecated";
+import {Router} from "@angular/router";
 import {Http, Response, Headers, RequestOptions} from '@angular/http';
 import {HttpClient} from './http.client';
 import {Observable} from 'rxjs/Observable';
@@ -8,9 +8,9 @@ import {Observable} from 'rxjs/Observable';
 // Annotation to make the class a service
 @Injectable()
 export class AuthService {
-    private LOGOUT_URL = 'http://jhipsterback.cfapps.io/api/logout';
-    private LOGIN_URL = 'http://jhipsterback.cfapps.io/api/authenticate';
-    private ACCOUNT_URL = 'http://jhipsterback.cfapps.io/api/account';
+    private LOGOUT_URL = '/api/logout';
+    private LOGIN_URL = '/api/authenticate';
+    private ACCOUNT_URL = '/api/account';
     private AUTH_TOKEN = 'authenticationToken';
     private identity;
     private promiseIdentity:Promise<any>;

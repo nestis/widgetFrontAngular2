@@ -1,6 +1,6 @@
 // Main application component
 import {Component, OnInit} from "@angular/core";
-import {Router, RouteConfig, RouterLink, ROUTER_DIRECTIVES} from "@angular/router-deprecated";
+import {Router, ROUTER_DIRECTIVES} from "@angular/router";
 import {TranslateService} from 'ng2-translate/ng2-translate';
 
 // Import Custom components and services
@@ -13,13 +13,8 @@ declare var componentHandler: any;
 @Component({
     selector: "[app]",
     templateUrl: "./app/app.html",
-    directives: [LoginComponent, HomeComponent, RouterLink, ROUTER_DIRECTIVES]
+    directives: [LoginComponent, HomeComponent, ROUTER_DIRECTIVES]
 })
-@RouteConfig([
-    {path: '/login', component: LoginComponent, as: 'Login', useAsDefault: true},
-    // If we want to define new routes on the component, we need to use the syntax /url/...
-    {path: '/home/...', component: HomeComponent, as: 'Home'}
-])
 
 export class AppComponent implements OnInit {
     private LANG_TOKEN = "VASSAngular2.lang";

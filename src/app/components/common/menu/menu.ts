@@ -1,11 +1,11 @@
 import {Component} from "@angular/core";
-import {RouterLink} from "@angular/router-deprecated";
+import {ROUTER_DIRECTIVES} from "@angular/router";
 import {TranslatePipe} from 'ng2-translate/ng2-translate';
 import {AuthService} from '../../../services/auth.service';
 @Component({
     selector: '[menu-component]',
     templateUrl: './app/components/common/menu/menu.html',
-    directives: [RouterLink],
+    directives: [ROUTER_DIRECTIVES],
     pipes: [TranslatePipe]
 })
 

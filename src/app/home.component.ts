@@ -1,5 +1,5 @@
 import {Component, OnInit} from "@angular/core";
-import {Router, RouteConfig, RouterLink, ROUTER_DIRECTIVES} from "@angular/router-deprecated";
+import {Router, ROUTER_DIRECTIVES} from "@angular/router";
 
 import {HomePage} from './components/home/home';
 import {AdminPage} from './components/admin/admin';
@@ -16,13 +16,8 @@ declare var componentHandler: any;
 @Component({
     selector: "[home]",
     templateUrl: "./app/home.html",
-    directives: [Menu, Footer, Header, RouterLink, ROUTER_DIRECTIVES]
+    directives: [Menu, Footer, Header, ROUTER_DIRECTIVES]
 })
-@RouteConfig([
-    {path: '/', component: HomePage, as:'Home', useAsDefault: true},
-    {path: '/admin', component: AdminPage, as:'Admin'},
-    {path: '/contact', component: ContactPage, as: 'Contact'}
-])
 
 export class HomeComponent implements OnInit {
     // Service injections must be here

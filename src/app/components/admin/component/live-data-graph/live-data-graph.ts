@@ -48,7 +48,7 @@ export class LiveDataGraphComponent {
 
     ngOnInit() {
         var self = this;
-        setInterval(() => {
+        this.interval = setInterval(() => {
             self._LiveDataService.getData().then((res: string) => {
                 self.chart.series[0].addPoint(parseInt(res, 10));
             });
@@ -60,7 +60,7 @@ export class LiveDataGraphComponent {
 
     ngOnDestroy() {
         // viewChild is updated after the view has been checked
-        console.log('AfterViewChecked: ');
+        console.log('Destroying Admin Component');
         clearInterval(this.interval);
     }
     chart: any;

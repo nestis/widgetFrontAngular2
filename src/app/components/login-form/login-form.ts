@@ -2,7 +2,7 @@ import {Component, ViewChild} from '@angular/core';
 import {AuthService} from '../../services/auth.service';
 import {TranslateService, TranslatePipe} from 'ng2-translate/ng2-translate';
 import {DialogComponent} from '../common/dialog/dialog';
-import {Router} from "@angular/router-deprecated";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'login-form',

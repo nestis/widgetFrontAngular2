@@ -6,9 +6,9 @@ import {AppComponent} from "./app.component";
 import {bootstrap} from "@angular/platform-browser-dynamic";
 import {provide} from "@angular/core";
 import {LocationStrategy, HashLocationStrategy} from "@angular/common";
-import {ROUTER_PROVIDERS} from "@angular/router-deprecated";
 import {HTTP_PROVIDERS, Http} from '@angular/http';
 import {TRANSLATE_PROVIDERS, TranslateLoader, TranslateStaticLoader} from 'ng2-translate/ng2-translate';
+import {APP_ROUTER_PROVIDERS} from './app.routes';
 
 // Import a few components to help us deal with http requests
 import 'rxjs/add/operator/map';
@@ -19,7 +19,8 @@ import {AuthService, HttpClient} from './services/common.services';
 import {LiveDataService} from './components/admin/services/livedata.service';
 
 bootstrap(AppComponent, [
-    ROUTER_PROVIDERS, HTTP_PROVIDERS, TRANSLATE_PROVIDERS,
+    HTTP_PROVIDERS, TRANSLATE_PROVIDERS,
+    APP_ROUTER_PROVIDERS,
     AuthService, HttpClient, LiveDataService,
 
     // For now, only static provider is available. We cannot have json files per component.
